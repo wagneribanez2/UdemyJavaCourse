@@ -3,6 +3,8 @@ package secao10exceptions.application;
 import java.util.Scanner;
 
 import secao10exceptions.model.entities.Account;
+import secao10exceptions.model.exception.DomainException;
+
 
 public class Program {
 	public static void main(String[] args) {
@@ -37,7 +39,7 @@ public class Program {
 	
 		System.out.println("New balance: " + acc.getBalance());
 		
-		}catch(IllegalArgumentException e) {
+		}catch(DomainException e) {
 			System.out.println(e.getMessage());
 			e.getStackTrace();
 		}
